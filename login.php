@@ -6,9 +6,11 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 
 $koneksi = new mysqli("localhost", "root", "", "db_daftarizen");
 
-if($_SESSION['admin'] || $_SESSION['user']){
+if($_SESSION['admin']){
     header("location:index.php");
-}else{
+}elseif($_SESSION['user']){
+    header("location:indexuser.php");
+}else {
 ?>
 
 <!DOCTYPE html>
@@ -60,9 +62,6 @@ if($_SESSION['admin'] || $_SESSION['user']){
                                 <label class="checkbox-inline">
                                     <input type="checkbox" />Ingat saya
                                 </label>
-                                <span class="pull-right">
-                                    <a href="#">Lupa Password ? </a>
-                                </span>
                             </div>
 
                             <input type="submit" name="login" value="Login" class="btn btn-primary">
@@ -111,7 +110,7 @@ if (isset($_POST['login'])) {
             header("location:index.php");
         } elseif ($data['level'] == "user") {
             $_SESSION['user'] = $data['id_user'];
-            header("location:index.php");
+            header("location:indexuser.php");
         }
     } else {
 ?>

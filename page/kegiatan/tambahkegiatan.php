@@ -1,8 +1,8 @@
 <?php
 
-    error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 
-    $koneksi = new mysqli("localhost","root","","db_daftarizen");
+$koneksi = new mysqli("localhost", "root", "", "db_daftarizen");
 
 ?>
 
@@ -13,9 +13,9 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-md-12">
-                <form method="POST">
+                <form method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label>Nama</label>
+                        <label>Nama Kegiatan</label>
                         <input type="text" class="form-control" name="nama_kegiatan" placeholder="masukkan nama kegiatan" />
                     </div>
                     <div class="form-group">
@@ -41,23 +41,29 @@
 </div>
 
 <?php
+
+if (isset($_POST['simpan'])) {
     $namaKegiatan = $_POST['nama_kegiatan'];
     $tglKegiatan = $_POST['tgl_kegiatan'];
-    $lampiran = $_POST['lampiran'];
+
+    $lampiran = $_FILES['lampiran']['name'];
+    $lokasi = $_FILES['lampiran']['tmp_name'];
+    $upload = move_uploaded_file($lokasi, "images/" . $lampiran);
     $keterangan = $_POST['keterangan'];
 
-    $simpan = $_POST['simpan'];
+    if ($upload) {
 
-    if($simpan){
         $sql = $koneksi->query("insert into tb_kegiatan (nama_kegiatan, tgl_kegiatan, lampiran, keterangan) 
         values('$namaKegiatan', '$tglKegiatan', '$lampiran', '$keterangan')");
 
-        if($sql){
+        if ($sql) {
             ?>
-                <script type="text/javascript">
-                    alert("Data Berhasil Disimpan");
-                </script>
+            <script type="text/javascript">
+                alert("Data Berhasil Disimpan");
+                window.location.href = "?page=listkegiatan";
+            </script>
             <?php
         }
     }
+}
 ?>

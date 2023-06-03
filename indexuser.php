@@ -5,7 +5,7 @@
 
     $koneksi = new mysqli("localhost","root","","db_daftarizen");
 
-        if($_SESSION['admin']){
+        if($_SESSION['user']){
 
 ?>
 
@@ -37,7 +37,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">DAFTARIZEN</a>
+                <a class="navbar-brand" href="indexuser.php">DAFTARIZEN</a>
             </div>
             <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -52,19 +52,12 @@ font-size: 16px;"> Last access : 30 May 2023 &nbsp; <a href="logout.php" class="
                         <img src="assets/img/find_user.png" class="user-image img-responsive" />
                     </li>
                     <li>
-                        <a href="index.php"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                        <a href="indexuser.php"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="?page=listkegiatan"><i class="fa fa-desktop fa-3x"></i>Data Kegiatan</a>
-                    </li>
-                    <li>
-                        <a href="?page=listpengguna"><i class="fa fa-laptop fa-3x"></i>Data Pengguna</a>
-                    </li>
-                    <li>
-                        <a href="?page=listpendaftaran"><i class="fa fa-edit fa-3x"></i>Laporan Pendaftaran</a>
+                        <a href="?page=daftarkegiatan"><i class="fa fa-desktop fa-3x"></i>Daftar Kegiatan</a>
                     </li>
                 </ul>
-
             </div>
 
         </nav>
@@ -77,41 +70,17 @@ font-size: 16px;"> Last access : 30 May 2023 &nbsp; <a href="logout.php" class="
                             $page = $_GET['page'];
                             $aksi = $_GET['aksi'];
 
-                            if($page == "listkegiatan"){
+                            if($page == "daftarkegiatan"){
                                 if($aksi == ""){
-                                    include "page/kegiatan/listkegiatan.php";
-                                } elseif($aksi=="tambahkegiatan"){
-                                    include "page/kegiatan/tambahkegiatan.php";
-                                }elseif($aksi=="ubahkegiatan"){
-                                    include "page/kegiatan/ubahkegiatan.php";
-                                }elseif($aksi=="hapuskegiatan"){
-                                    include "page/kegiatan/hapuskegiatan.php";
-                                }elseif($aksi=="lihatkegiatan"){
-                                    include "page/kegiatan/lihatkegiatan.php";
-                                }
-
-                            } elseif($page == "listpengguna"){
-                                if($aksi == ""){
-                                    include "page/pengguna/listpengguna.php";
-                                }elseif($aksi=="tambahpengguna"){
-                                    include "page/pengguna/tambahpengguna.php";
-                                }elseif($aksi=="ubahpengguna"){
-                                    include "page/pengguna/ubahpengguna.php";
-                                }elseif($aksi=="hapuspengguna"){
-                                    include "page/pengguna/hapuspengguna.php";
-                                }
-
-                            } elseif($page == "listpendaftaran"){
-                                if($aksi == ""){
-                                    include "page/pendaftaran/listpendaftaran.php";
-                                }elseif($aksi=="ubahpeserta"){
-                                    include "page/pendaftaran/ubahpeserta.php";
-                                }elseif($aksi=="hapuspeserta"){
-                                    include "page/pendaftaran/hapuspeserta.php";
+                                    include "page/daftar/daftarkegiatan.php";
+                                } elseif($aksi=="ikutkegiatan"){
+                                    include "page/daftar/ikutkegiatan.php";
+                                }elseif($aksi=="detailkegiatan"){
+                                    include "page/daftar/detailkegiatan.php";
                                 }
 
                             } elseif($page==""){
-                                include "home.php";
+                                include "homeuser.php";
                             }
                         ?>
 

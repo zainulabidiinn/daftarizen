@@ -29,7 +29,7 @@ $koneksi = new mysqli("localhost", "root", "", "db_daftarizen");
         <div class="row text-center  ">
             <div class="col-md-12">
                 <br /><br />
-                <h2>Halaman Registrasi Akun</h2>
+                <h2>Registrasi Akun</h2>
                 <br />
             </div>
         </div>
@@ -41,7 +41,7 @@ $koneksi = new mysqli("localhost", "root", "", "db_daftarizen");
                         <strong> Masukkan Data Registrasi Dibawah Ini! </strong>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form method="POST" enctype="multipart/form-data">
                             <br />
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="fa fa-circle-o-notch"></i></span>
@@ -60,16 +60,16 @@ $koneksi = new mysqli("localhost", "root", "", "db_daftarizen");
                                 <input type="password" name="password" class="form-control" placeholder="Masukkan Password" />
                             </div>
                             <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                <input type="password" name="cpassword" class="form-control" placeholder="Konfirmasi Password" />
+                                <span class="input-group-addon"><i class="fa fa-tag"></i></span>
+                                <select name="level" class="form-control show-tick">
+                                    <option value="">Pilih Level</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="user">Pengguna</option>
+                                </select>
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="fa fa-tag"></i></span>
-                                <input type="text" name="level" class="form-control" placeholder="Pilih Level" />
-                            </div>
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-tag"></i></span>
-                                <input type="file" name="foto" class="form-control" placeholder="Masukkan Foto" />
+                                <input type="file" name="foto" class="form-control" />
                             </div>
 
                             <input type="submit" name="registrasi" value="Daftar" class="btn btn-primary">
@@ -99,3 +99,33 @@ $koneksi = new mysqli("localhost", "root", "", "db_daftarizen");
 </body>
 
 </html>
+
+<?php
+
+if (isset($_POST['registrasi'])) {
+    $namaUser = $_POST['nama_user'];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $level = $_POST['level'];
+
+    $foto = $_FILES['foto']['name'];
+    $lokasi = $_FILES['foto']['tmp_name'];
+    $upload = move_uploaded_file($lokasi, "images/" . $foto);
+
+    if ($upload) {
+
+        $sql = $koneksi->query("insert into tb_user (nama_user, username, email, password, level, foto) 
+        values('$namaUser', '$username', '$email', '$password', '$level', '$foto')");
+
+        if ($sql) {
+            ?>
+            <script type="text/javascript">
+                alert("Berhasil Terdaftar");
+                window.location.href = "login.php";
+            </script>
+            <?php
+        }
+    }
+}
+?>

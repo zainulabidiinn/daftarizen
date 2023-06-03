@@ -1,7 +1,3 @@
-<a href="?page=listkegiatan&aksi=tambahkegiatan" 
-   class="btn btn-primary"
-   style="margin-bottom: 10px;">Tambah Kegiatan</a>
-
 <div class="row">
     <div class="col-md-12">
         <!-- Advanced Tables -->
@@ -37,9 +33,8 @@
                                     <td><?php echo $data['tgl_kegiatan']; ?></td>
                                     <td align="center"><img src="images/<?php echo $data['lampiran'] ?>" width="100" height="100" alt=""/></td>
                                     <td>
-                                        <a href="?page=listkegiatan&aksi=lihatkegiatan&id_kegiatan=<?php echo $data['id_kegiatan']; ?>" class="btn btn-info">Detail</a>
-                                        <a href="?page=listkegiatan&aksi=ubahkegiatan&id_kegiatan=<?php echo $data['id_kegiatan']; ?>" class="btn btn-info">Ubah</a>
-                                        <a onclick="return confirm('Apakah Anda Yakin Akan Menghapus?')" a href="?page=listkegiatan&aksi=hapuskegiatan&id_kegiatan=<?php echo $data['id_kegiatan']; ?>" class="btn btn-danger">Hapus</a>
+                                        <a href="?page=daftarkegiatan&aksi=detailkegiatan&id_kegiatan=<?php echo $data['id_kegiatan']; ?>" class="btn btn-info">Detail</a>
+                                        <a href="?page=daftarkegiatan&aksi=ikutkegiatan&id_kegiatan=<?php echo $data['id_kegiatan']; ?>" class="btn btn-primary">Daftar</a>
                                     </td>
                                 </tr>
 
