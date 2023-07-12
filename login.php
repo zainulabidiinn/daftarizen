@@ -16,6 +16,18 @@ if($_SESSION['admin']){
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
+<style>
+    body{
+        background:linear-gradient(100deg, pink 10%, rgb(155, 209, 242)) 100%;
+    }
+    h2{
+        color: rgb(194, 61, 90);
+    }
+    strong{
+        color: rgb(194, 61, 90);
+    }
+</style>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -52,7 +64,7 @@ if($_SESSION['admin']){
                             <br />
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="fa fa-tag"></i></span>
-                                <input type="text" name="username" class="form-control" placeholder="Username" />
+                                <input type="text" name="username" color:rgb(194, 61, 90); class="form-control" placeholder="Username" />
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
@@ -64,9 +76,9 @@ if($_SESSION['admin']){
                                 </label>
                             </div>
 
-                            <input type="submit" name="login" value="Login" class="btn btn-primary">
+                            <input type="submit" name="login" value="Login" style="background-color:rgb(194, 61, 90); border-color: white;"class="btn btn-primary">
                             <hr />
-                            daftar akun ? <a href="registrasi.php">klik disini </a>
+                            Daftar akun ? <a href="registrasi.php">klik disini </a>
                         </form>
                     </div>
 
