@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <!-- Advanced Tables -->
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading" style="color:rgb(194, 61, 90);">
                 Daftar Kegiatan
             </div>
             <div class="panel-body">
