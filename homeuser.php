@@ -1,4 +1,4 @@
-<marquee>Selamat Datang Dihalaman Utama Pengguna Aplikasi Daftarizen Berbasis Web, Jangan Lupa Senyum Meskipun Hati Tertekan Oleh Pahitnya Kenyataan, Oh iya Jangan Lupa Nangis Yaaa</marquee>
+<marquee>Selamat Datang Dihalaman Utama Pengguna Aplikasi Daftarizen Berbasis Web</marquee>
 <div id="page-inner">
     <div class="row">
         <div class="col-md-12">
