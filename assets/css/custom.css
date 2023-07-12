@@ -13,24 +13,25 @@
     GENERAL  STYLES    
     =============================================*/
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
  #wrapper {
     width: 100%;
-    background:#202020;
+    background: pink;
+    color:rgb(194, 61, 90);
 }
 
 #page-wrapper {
     padding: 15px 15px;
     min-height: 600px;
-    background:#F3F3F3;
+    background:linear-gradient(100deg, pink 10%, rgb(155, 209, 242)) 100%;
    
 }
 #page-inner {
     width:100%;
     margin:10px 20px 10px 0px;
-    background-color:#fff!important;
+    background-color:linear-gradient(100deg, rgb(155, 209, 242) 0%, pink) 100%!important;
     padding:10px;
     min-height:1200px;
 }
@@ -39,16 +40,17 @@ body {
     text-align:center;
 }
 .no-boder {
-    border:1px solid #f3f3f3;
+    border:1px solid #c0efd0;
 }
 h2 {
-    color: black;
+    color: rgb(194, 61, 90);
+    font-family: cursive;
 }
 h4 {
     padding-top:10px;
 }
 .square-btn-adjust {
-    border: 0px solid transparent; 
+    border: 0px solid #c42c9e; 
    -webkit-border-radius: 0px;
 -moz-border-radius: 0px;
 border-radius: 0px;
@@ -59,11 +61,33 @@ p {
     line-height:25px;
     padding-top:20px;
 }
+.panel-body {
+    background:rgb(255, 221, 221);
+    color: rgb(194, 61, 90);
+}
+.table-responsive {
+    border: 3px solid white;
+}
+a {
+    color: rgb(194, 61, 90);
+    font-weight: bold;
+}
+.input-group-addon {
+    color: rgb(194, 61, 90);
+}
+.form-control {
+    color: rgb(194, 61, 90);
+}
+.panel-heading {
+    color: rgb(194, 61, 90);
+    font-weight: bold;
+}
+
 /*==============================================
    DASHBOARD STYLES    
     =============================================*/
 .panel-back {
-    background-color:#F8F8F8;
+    background-color:rgb(255, 221, 221);
 
 }
    .noti-box {
@@ -82,6 +106,12 @@ vertical-align: middle;
 text-align: center;
 font-size: 40px;
 }
+.text-box {
+    color: rgb(194, 61, 90);
+}
+.text-muted {
+    color: rgb(194, 61, 90);
+}
 .text-box p{
     margin: 0 0 3px;
 }
@@ -96,20 +126,20 @@ border-radius: 50px;
 
 }
     .bg-color-green {
-background-color: #00CE6F;
-color: #fff;
+background-color: #9df9ce;
+color: #fdfcfc;
 }
  .bg-color-blue {
-background-color: #A95DF0;
-color: #fff;
+background-color: #dff4b4;
+color: #fdfcfc;
 }
   .bg-color-red {
-background-color: #DB0630;
-color: #fff;
+background-color: #a9bcee;
+color: #fdfcfc;
 }
   .bg-color-brown {
-background-color: #B94A00;
-color: #fff;
+background-color: #fec198;
+color: #fdfcfc;
 }
 
 
@@ -127,7 +157,7 @@ font-size: 40px;
 
  .main-temp-back {
 background: #8702A8;
-color: #FFFFFF;
+color: #efc0c0;
 font-size: 16px;
 font-weight: 300;
 text-align: center;
@@ -143,25 +173,25 @@ font-size: 40px;
 -moz-border-radius: 0px;
 border-radius: 0px;
 background-color:#2EA7EB;
-color:#fff;
+color:#efc0c0;
 }
     .back-dash p {
         padding-top:16px;
         font-size:13px;
-        color:#fff;
+        color:#efc0c0;
         line-height:25px;
         text-align:justify;
     }
     .back-footer-green {
     background-color: #009B50;
-    border-top: 0px solid #fff;
+    border-top: 0px solid #efc0c0;
 }
      .back-footer-red {
     background-color: #AF0000;
-    border-top: 0px solid #fff;
+    border-top: 0px solid #efc0c0;
 }
      .color-bottom-txt {
-   color: #000;
+   color: #e1b351;
 font-size: 16px;
 line-height: 30px;
 }
@@ -178,14 +208,14 @@ list-style: none;
  .chat-box li {
 margin-bottom: 15px;
 padding-bottom: 5px;
-border-bottom: 1px dotted #808080;
+border-bottom: 1px dotted rgb(194, 61, 90);
 }
  .chat-box li.left .chat-body {
 margin-left: 90px;
 }
  .chat-box li .chat-body p {
 margin: 0;
-color: #8d8888;
+color: rgb(194, 61, 90);
 }
 .chat-img>img {
     margin-left:20px;
@@ -206,8 +236,8 @@ max-width:170px;
 }
 
 .navbar-cls-top .navbar-brand {
-	color: #fff;
-background: #C90000;
+	color: rgb(194, 61, 90);
+background: linear-gradient(30deg, rgb(192, 219, 255) 0%, pink) 100%;
 width: 260px;
 text-align: center;
 height: 60px;
@@ -250,8 +280,8 @@ font-weight: 700;
 	padding:0;
 }
 .sidebar-collapse .nav > li > a {
-	color:#fff;
-	background:#202020;
+	color:rgb(194, 61, 90);
+	background:linear-gradient(0deg, pink 0%, rgb(192, 219, 255)) 100%; 
 	text-shadow:none;
 	
 }
@@ -259,12 +289,12 @@ font-weight: 700;
 	padding:15px 10px;
 }
 .sidebar-collapse > .nav > li {
-	border-bottom: 1px solid rgba(107, 108, 109, 0.19);
+	border-bottom: 1px solid rgb(194, 61, 90);
 }
 .sidebar-collapse .nav > li > a:hover,
 .sidebar-collapse .nav > li > a:focus {
 	
-	background:#0A0A0A;
+	background:linear-gradient(50deg, rgb(232, 197, 204) 0%, rgb(192, 219, 255)) 100%;
 	outline:0;
 }
 
@@ -276,7 +306,7 @@ font-weight: 700;
 	left:20px;
 	width:15px;
 	height:1px;
-	background:#ff0000;
+	background:#001aff;
 	top:20px;
 }
 .nav-second-level > li > a:after,
@@ -287,7 +317,7 @@ font-weight: 700;
 	left:20px;
 	width:1px;
 	height:100%;
-	background:#ff0000;
+	background:rgb(192, 219, 255);
 	top:0px;
 	z-index:10;
 }
@@ -301,37 +331,37 @@ font-weight: 700;
 }
 .navbar-side {
 	border:none;
-	background-color: #202020;
+	background-color: rgb(192, 219, 255);
 	
 }
 .navbar-cls-top {
-	background:#4D4D4D;
+	background:linear-gradient(10deg, pink 25%, rgb(155, 209, 242)) 100%;
 	border-bottom:none;
 	
 }
 .navbar-cls-top .navbar-brand:hover {
 
-background: #C90000;
-color:#fff;
+background: pink;
+color:rgb(194, 61, 90);
 
 }
 
 .navbar-default {
-border:0px solid black;
+border:0px solid ;
      
 }
 .navbar-header {
-    background: #A70303;
+    background: pink;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-background-color: #B40101;
+background-color: rgb(194, 61, 90);
 }
 .navbar-default .navbar-toggle {
-border-color: #fff;
+border-color: rgb(194, 61, 90);
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-background-color: #FFF;
+background-color: rgb(194, 61, 90);
 }
 .nav > li > a > i {
     margin-right:10px;
