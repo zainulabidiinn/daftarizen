@@ -39,7 +39,7 @@
                 </button>
                 <a class="navbar-brand" href="index.php">DAFTARIZEN</a>
             </div>
-            <div style="color: white;
+            <div style="color: rgb(194, 61, 90);
 padding: 15px 50px 5px 50px;
 float: right;
 font-size: 16px;"> Last access : 30 May 2023 &nbsp; <a href="logout.php" class="btn btn-danger square-btn-adjust">Logout</a> </div>
