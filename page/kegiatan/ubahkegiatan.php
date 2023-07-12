@@ -39,7 +39,7 @@ $tampil = $sql->fetch_assoc();
                         <input type="text" class="form-control" name="keterangan" value="<?php echo $tampil['keterangan']; ?>" />
                     </div>
                     <div>
-                        <input type="submit" name="simpan" value="Ubah" class="btn btn-primary">
+                        <input type="submit" name="simpan" value="Ubah" class="btn btn-primary" style="background-color:rgb(194, 61, 90);">
                     </div>
             </div>
             </form>
