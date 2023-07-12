@@ -39,7 +39,7 @@ $koneksi = new mysqli("localhost", "root", "", "db_daftarizen");
                         <input type="file" class="form-control" name="foto" />
                     </div>
                     <div>
-                        <input type="submit" name="daftar" value="Daftar" class="btn btn-primary">
+                        <input type="submit" name="daftar" value="Daftar" class="btn btn-primary" style="background-color:rgb(194, 61, 90);">
                     </div>
             </div>
             </form>
