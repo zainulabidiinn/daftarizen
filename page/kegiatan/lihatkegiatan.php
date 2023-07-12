@@ -35,7 +35,7 @@ $tampil = $sql->fetch_assoc();
                     <label>Keterangan</label>
                     <p name="keterangan" class="form-control-static"><?php echo $tampil['keterangan']; ?></p>
                 </div>
-                <p><a href="?page=listkegiatan" class="btn btn-primary">Kembali</a></p>
+                <p><a href="?page=listkegiatan" class="btn btn-primary" style="background-color:rgb(194, 61, 90);">Kembali</a></p>
             </div>
         </div>
     </div>
