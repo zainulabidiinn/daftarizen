@@ -1,12 +1,12 @@
 <a href="?page=listpengguna&aksi=tambahpengguna" 
    class="btn btn-primary"
-   style="margin-bottom: 10px;">Tambah Pengguna</a>
+   style="margin-bottom: 10px; background-color:rgb(194, 61, 90);">Tambah Pengguna</a>
 
 <div class="row">
     <div class="col-md-12">
         <!-- Advanced Tables -->
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading" style="color:rgb(194, 61, 90);">
                 Daftar Pengguna
             </div>
             <div class="panel-body">
