@@ -7,7 +7,7 @@ $koneksi = new mysqli("localhost", "root", "", "db_daftarizen");
 ?>
 
 <div class="panel panel-default">
-    <div class="panel-heading">
+    <div class="panel-heading" style="color:rgb(194, 61, 90);">
         Tambah Pengguna
     </div>
     <div class="panel-body">
@@ -43,7 +43,7 @@ $koneksi = new mysqli("localhost", "root", "", "db_daftarizen");
                         <input type="file" class="form-control" name="foto" />
                     </div>
                     <div>
-                        <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
+                        <input type="submit" name="simpan" value="Simpan" class="btn btn-primary" style="background-color:rgb(194, 61, 90);">
                     </div>
             </div>
             </form>
