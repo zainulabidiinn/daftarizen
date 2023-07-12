@@ -1,12 +1,11 @@
 <a href="?page=listkegiatan&aksi=tambahkegiatan" 
    class="btn btn-primary"
-   style="margin-bottom: 10px;">Tambah Kegiatan</a>
-
+   style="margin-bottom: 10px; background-color:rgb(194, 61, 90);" >Tambah Kegiatan</a>  
 <div class="row">
     <div class="col-md-12">
         <!-- Advanced Tables -->
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading" style="color:rgb(194, 61, 90);" >
                 Daftar Kegiatan
             </div>
             <div class="panel-body">
@@ -39,7 +38,7 @@
                                     <td>
                                         <a href="?page=listkegiatan&aksi=lihatkegiatan&id_kegiatan=<?php echo $data['id_kegiatan']; ?>" class="btn btn-info">Detail</a>
                                         <a href="?page=listkegiatan&aksi=ubahkegiatan&id_kegiatan=<?php echo $data['id_kegiatan']; ?>" class="btn btn-info">Ubah</a>
-                                        <a onclick="return confirm('Apakah Anda Yakin Akan Menghapus?')" a href="?page=listkegiatan&aksi=hapuskegiatan&id_kegiatan=<?php echo $data['id_kegiatan']; ?>" class="btn btn-danger">Hapus</a>
+                                        <a onclick="return confirm('Apakah Anda Yakin Akan Menghapus?')" a href="?page=listkegiatan&aksi=hapuskegiatan&id_kegiatan=<?php echo $data['id_kegiatan']; ?>" class="btn btn-danger" >Hapus</a>
                                     </td>
                                 </tr>
 
